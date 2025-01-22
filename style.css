@@ -1,0 +1,152 @@
+/* ||| MAIN ||| */
+/* BODY  */
+body {
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+    background-color: #121212;
+    font-family: "Roboto Slab", serif;
+    font-size: 24px;
+    line-height: 1.7;
+}
+
+/* TAB */
+
+#nav-tab {
+    -webkit-user-select: none;
+    user-select: none;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    transition: top 0.7s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    padding: 10px 0;
+    background-color: #1f1f1f;
+    border-bottom: 3px solid #3a3a3a;
+    font-weight: bold;
+}
+
+#nav-tab.hidden {
+    top: -80px;
+}
+
+.tab-link {
+    text-decoration: none;
+    color: #e0e0e0;
+    padding: 0 10px;
+}
+
+.tab-link:hover {
+    border-bottom: 3px solid #505050;
+}
+
+.tab-link.active {
+    cursor: default;
+    border-bottom: 3px solid #ffffff;
+}
+
+main {
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.container {
+    padding: 10px;
+    margin: 20px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+}
+
+.letter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.letter:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+.letter img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.poem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+.poem:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s;
+}
+
+.poem h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.poem div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Old Standard TT", serif;
+    font-style: italic;
+    font-size: 26px;
+}
+
+/* ||| ADAPTIVITY ||| */
+/* 1024 */
+@media (max-width: 1024px) {
+    #nav-tab {
+        font-size: 20px;
+    }
+    /* body {
+        transform: scale(0.5);
+        overflow: hidden;
+    } */
+    .tab-content.active {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 768 */
+@media (max-width: 768px) {
+    #nav-tab {
+        font-size: 18px;
+    }
+
+    .tab-content.active {
+        grid-template-columns: 1fr;
+    }
+}
