@@ -92,6 +92,7 @@ img {
     background-color: #2a2a2a;
     border-radius: 10px;
     box-shadow: 0 0 10px #000000;
+    transition: transform 0.7s 0.5s;
 }
 
 .container:hover {
