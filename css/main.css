@@ -93,11 +93,19 @@ img {
     border-radius: 10px;
     box-shadow: 0 0 10px #000000;
     transition: transform 0.7s 0.5s;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: inherit;
 }
 
 .container:hover {
     transition: transform 0.7s 0.5s;
     transform: scale(1.05);
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: inherit;
 }
 
 .author-title {
